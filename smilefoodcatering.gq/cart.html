@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://ff.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script><script type="text/javascript" src="http://ff.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="cart.js">   
+</script>
+
+<style type="text/css">
+    
+body {
+background-color: #938b86;
+background-repeat: no-repeat;
+color: #fff;
+font-family: 'proxima-nova-soft', sans-serif;
+font-size: 18px;
+min-height: 100%;
+line-height: 1.5;
+padding: 2.5em 0;  
+}
+
+table{
+background-color: #fff;
+color: #1b1b1c;
+}
+
+th{
+background-color: rgb(33,31,35);
+padding:20px;
+width:80px;
+color: #ffffff;
+}
+
+td {
+width:70px;
+text-align:center;
+}
+
+.informatii_cart{
+display:none;
+}
+
+.cos_cumparaturi{
+position: relative;
+margin-top:50px;
+display: table;
+margin-right: auto;
+margin-left: auto;
+top:100px;
+margin-bottom:200px;
+}
+
+#link {
+background-color: #2e1d3f;
+border-radius: 10px;
+color: #fff;
+font-size: 18px;
+font-weight: 700;
+padding: 15px;
+position: absolute;
+margin-left: 85px;
+text-decoration: none;
+width: 150px;
+height:60px;
+text-align:center;
+position: absolute;
+top:50px;  
+}
+
+@media screen and (max-width:760px) {
+th {
+width:30px;
+padding:0; 
+font-size: 13px;
+}
+td {
+width:40px;
+}
+img{
+width:40px;
+height:30px;
+}
+input[type=number]{
+width: 30px;
+}
+a {
+font-size: 12px;
+}
+#link {
+width:85px;
+height:30px;
+font-size: 10px;
+}
+
+}
+@media screen and (min-width:768px) {
+
+th {
+width:40px;
+padding:10px; 
+font-size: 14px;
+}
+td {
+width:50px;
+}
+img{
+width:60px;
+height:40px;
+}
+input[type=number]{
+width: 30px;
+}
+a {
+font-size: 13px;
+}
+#link {
+width:90px;
+height:35px;
+font-size: 12px;
+}
+@media screen and (min-width:992px) { 
+th {
+width:60px;
+padding:10px; 
+font-size: 14px;
+}
+td {
+width:60px;
+}
+img{
+width:80px;
+height:50px;
+}
+input[type=number]{
+width: 60px;
+}
+a {
+font-size: 14px;
+}
+#link {
+width:100px;
+height:40px;
+font-size: 13px;
+}
+
+}
+@media screen and (min-width:1280px) {
+th {
+width:80px;
+padding:20px; 
+font-size: 14px;
+}
+td {
+width:70px;
+}
+img{
+width:100px;
+height:70px;
+}
+#link {
+width: 115px;
+height: 45px;
+font-size: 14px;;
+}
+
+}
+</style>
+</head>
+<body onload="adauga_cos();">
+
+<a id ="link" href="http://smilefoodcatering.gq/index.html" >Continua cumparaturile</a>
+
+<div class="informatii_cart">
+<img src="" alt="..." class="" width="200px" height="200px" id="poza"/>
+  <input type="hidden" value="" id="id"> 
+    <div id="nume"></div>
+     <div id="pret"></div>
+        <input type="button" value="" id="cantitate">
+         <div id="subtotal"></div>
+         <div id="tva"></div>
+         <div id="total"></div>
+         
+</div>
+   <div class="cantitate"></div>
+ <div class="cos_cumparaturi">
+<table>
+
+	<tbody>
+	
+	<thead>
+	<tr><th></th><th>Nume</th><th>Pret</th><th>Cantitate</th><th>SubTotal</th><th>TVA</th><th>Total</th><th></th><th class="total_general">Total General</th></tr>
+	</thead>
+	
+	</tbody>
+	
+</table>
+
+</div>
+
+
+  <div id="cant"></div>
+</body>
+<script type="text/javascript">
+$(document).ready(function () {
+    setInterval(function () {
+        $('.total_general').load();
+    }, 1000);
+});
+</script>
+</html>

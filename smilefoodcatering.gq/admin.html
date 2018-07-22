@@ -1,0 +1,149 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <script type="text/javascript" src="http://ff.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="admin.js">
+ </script>
+ <style type="text/css">
+        
+body {
+ background-color: #938b86;
+ background-repeat: no-repeat;
+ color: #fff;
+ font-family: 'proxima-nova-soft', sans-serif;
+ font-size: 16px;
+ min-height: 100%;
+ line-height: 1.5;
+ padding: 2.5em 0;
+ overflow:auto;
+}
+ 
+.container {
+ display: table;
+ margin-right: auto;
+ margin-left: auto;
+ margin-top:100px;
+}
+
+.gestionare {
+ display: flex;
+ justify-content: center;;
+}
+
+.adauga {
+ display: flex;
+ justify-content: center;;
+ top:20px; 
+}
+
+.adauga a {
+ background-color: rgb(33,31,35);
+ padding: 15px;
+ text-decoration: none;
+ border-radius: 3px;
+ color: #fff;
+ font-size: 1em;
+ font-weight: 700;
+ padding: 15px;
+ text-decoration: none;
+}
+
+table{
+ background-color: #fff;
+ color: #1b1b1c;
+}
+th{
+ background-color: rgb(33,31,35);
+ padding:20px;
+ width:100px;
+ color: #ffffff;
+}
+
+td {
+ width:100px;
+ text-align:center;
+}
+
+.preloader{
+ width: 100px;
+ height: 100px; 
+ border: 6px solid #f3f3f3;
+ border-top:3px solid #f25a41;
+ border-radius: 100%;   
+ position: absolute;
+ top:0;
+ bottom:0;
+ left:0;
+ right: 0;
+ margin: auto;  
+ animation: spin 1s infinite linear;
+}
+
+@media screen and (max-width:1200px) {
+.produse {
+width:100%; 
+  }
+}
+@media screen and (max-width:680px) {
+th {
+width:30px;
+padding:0; 
+}
+
+img{
+width:40px;
+height:30px;
+}
+
+a {
+font-size: 12px;
+}
+
+}
+
+@keyframes spin {
+from{
+	transform: rotate(0deg);
+}to{
+	transform: rotate(360deg);
+    }
+}
+
+.hide {
+opacity:0;
+display:none;
+}
+
+.display {
+opacity:1;
+}
+
+</style>
+</head>
+<body >
+    <div class="gestionare"><h1>Gestionare produse</h1></div>
+	<div class="adauga"><a href="add.html">Adauga produs nou</a></div> 
+	<div class="container hide">
+            <table class="produse">
+            	<tbody>
+            	</tbody>  
+            </table>  
+	</div>  
+	 
+	<div class="preloader"></div> 
+          
+</body>
+<script type="text/javascript">
+
+setTimeout(function() {
+	document.querySelector('.preloader').className += 'hide';
+	}, 2000)
+	
+setTimeout(function() {
+	document.querySelector('.container').classList.remove('hide').className += 'display';
+	}, 2000)
+    	
+$('#myLink').click(function(){ sterge_produs(); return false; });
+    </script>
+</html>
